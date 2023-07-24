@@ -5,7 +5,7 @@ contains definition of index_range helper function
 from typing import Tuple
 
 
-def index_range(page: int, page_size: int) -> tuple:
+def index_range(page: int, page_size: int) -> tuple[int, int]:
     """
     calculate the start and the end index for pagination.
 
@@ -13,7 +13,7 @@ def index_range(page: int, page_size: int) -> tuple:
         page (int): The 1-indexed page number.
         page_size (int): The size of each page.
 
-    Returns:
+    Return:
         tuple: A tuple containing the start index (inclusive) and the end index (exclusive).
     """
     if page <= 0 or page_size <= 0:
